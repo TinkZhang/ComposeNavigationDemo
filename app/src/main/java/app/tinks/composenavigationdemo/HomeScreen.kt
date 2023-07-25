@@ -19,7 +19,7 @@ fun HomeScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text("This is Home Screen", style = MaterialTheme.typography.titleLarge)
-        Button(onClick = { navController.navigate(route = "destination-screen") }) {
+        Button(onClick = { navController.navigate(route = Screen.TestScreen.route) }) {
             Text("Go to Destination")
         }
     }

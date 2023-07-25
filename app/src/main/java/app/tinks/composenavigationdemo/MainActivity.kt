@@ -76,16 +76,10 @@ class MainActivity : ComponentActivity() {
                             }
                         }
                     ) { innerPadding ->
-                        NavHost(
-                            navController,
-                            startDestination = Screen.HomeScreen.route,
-                            Modifier.padding(innerPadding)
-                        ) {
-                            composable(Screen.HomeScreen.route) {
-                                HomeScreen(navController = navController)
-                            }
-                            composable(Screen.TestScreen.route) { DestinationScreen(navController = navController) }
-                        }
+                        MyNavHost(
+                            navController = navController,
+                            modifier = Modifier.padding(innerPadding)
+                        )
                     }
                 }
             }
